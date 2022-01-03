@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mapy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3c3-t4-u1a">
+                                <rect key="frame" x="0.0" y="57" width="414" height="537"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrz-cD-gOW">
+                                <rect key="frame" x="39" y="648" width="167" height="68"/>
+                                <state key="normal" title="Krakow"/>
+                                <connections>
+                                    <action selector="idzDoKrakowaWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yv0-Jb-8ji"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAy-uQ-bcH">
+                                <rect key="frame" x="244" y="667" width="78" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="Cfu-Oj-N3a"/>
+                                </constraints>
+                                <state key="normal" title="Hybrydowa"/>
+                                <connections>
+                                    <action selector="pokazHybrydowaWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jj-7H-QAI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tAy-uQ-bcH" firstAttribute="leading" secondItem="Mrz-cD-gOW" secondAttribute="trailing" constant="38" id="15U-0E-G7c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mrz-cD-gOW" secondAttribute="bottom" constant="146" id="UcO-jY-Uzh"/>
+                            <constraint firstItem="Mrz-cD-gOW" firstAttribute="top" secondItem="3c3-t4-u1a" secondAttribute="bottom" constant="54" id="VNZ-Ew-0ba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tAy-uQ-bcH" secondAttribute="trailing" constant="92" id="VXL-03-IEl"/>
+                            <constraint firstItem="tAy-uQ-bcH" firstAttribute="baseline" secondItem="Mrz-cD-gOW" secondAttribute="firstBaseline" id="YBR-f2-obk"/>
+                            <constraint firstItem="3c3-t4-u1a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="Zja-FP-CO0"/>
+                            <constraint firstItem="tAy-uQ-bcH" firstAttribute="top" secondItem="3c3-t4-u1a" secondAttribute="bottom" constant="73" id="bKJ-gZ-P63"/>
+                            <constraint firstItem="Mrz-cD-gOW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="mcQ-2T-wIS"/>
+                            <constraint firstItem="3c3-t4-u1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nr4-FX-Phs"/>
+                            <constraint firstItem="3c3-t4-u1a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yYn-aI-uee"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Krakow" destination="Mrz-cD-gOW" id="qgV-sI-mQo"/>
+                        <outlet property="mapy" destination="3c3-t4-u1a" id="0iB-pb-RNG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+</document>
